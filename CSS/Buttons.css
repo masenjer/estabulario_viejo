@@ -1,0 +1,199 @@
+#ButtonAccesUsuaris
+{
+	border:0;
+	background:url(../img/PuntoVerde.png);
+	background-repeat:no-repeat;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;	
+	font-weight:bold;
+	color:#666;
+	cursor:pointer;
+	width:130px;
+	text-align:right;
+}
+
+#ButtonTancaSessio
+{
+	border:0;
+	background:url(../img/PuntoRojo.png);
+	background-repeat:no-repeat;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;	
+	font-weight:bold;
+	color:#666;
+	cursor:pointer;
+	width:120px;
+	text-align:right;
+}
+
+.ButtonPlus
+{
+	border:0;
+	background:url(../img/form/PlusButton.png);
+	background-repeat:no-repeat;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;	
+	font-weight:bold;
+	color:#FFF;
+	cursor:pointer;
+	width:23px;
+	height:22px;
+	text-align:right;
+}
+
+.ButtonX
+{
+	border:0;
+	background:url(../img/form/XButton.png);
+	background-repeat:no-repeat;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;	
+	font-weight:bold;
+	color:#FFF;
+	cursor:pointer;
+	width:23px;
+	height:22px;
+	text-align:right;
+}
+
+#ButtonExit
+{
+	border:1px;
+	border-style:solid;
+	border-color:#666;
+	background:url(../img/MenuAdmin/ButtonExit.jpg);
+	cursor:pointer;
+	width:56px;
+	height:56px;
+}
+
+#ButtonSobre
+{
+	border:1px;
+	border-style:solid;
+	border-color:#666;
+	background:url(../img/MenuAdmin/ButtonSobre.jpg);
+	cursor:pointer;
+	width:56px;
+	height:56px;
+}
+
+#ButtonNewUserProc
+{
+	border:1px;
+	border-style:solid;
+	border-color:#666;
+	background:url(../img/MenuAdmin/NewProcUser.jpg);
+	cursor:pointer;
+	width:56px;
+	height:56px;
+}
+
+#ButtonUsers
+{
+	border:1px;
+	border-style:solid;
+	border-color:#666;
+	background:url(../img/MenuAdmin/ConsultaUsers.jpg);
+	cursor:pointer;
+	width:56px;
+	height:56px;
+}
+
+#ButtonInvestigador
+{
+	border:1px;
+	border-style:solid;
+	border-color:#666;
+	background:url(../img/MenuAdmin/ButtonInvestigador.jpg);
+	cursor:pointer;
+	width:56px;
+	height:56px;
+}
+
+#ButtonRata
+{
+	border:1px;
+	border-style:solid;
+	border-color:#666;
+	background:url(../img/MenuAdmin/ButtonRata.jpg);
+	cursor:pointer;
+	width:56px;
+	height:56px;
+}
+
+#ButtonPedido
+{
+	border:1px;
+	border-style:solid;
+	border-color:#666;
+	background:url(../img/MenuAdmin/ButtonPedido.jpg);
+	cursor:pointer;
+	width:56px;
+	height:56px;
+}
+
+#ButtonInforme
+{
+	border:1px;
+	border-style:solid;
+	border-color:#666;
+	background:url(../img/MenuAdmin/ButtonInforme.jpg);
+	cursor:pointer;
+	width:56px;
+	height:56px;
+}
+
+#ButtonProveidor
+{
+	border:1px;
+	border-style:solid;
+	border-color:#666;
+	background:url(../img/MenuAdmin/ButtonProveidor.jpg);
+	cursor:pointer;
+	width:56px;
+	height:56px;
+}
+
+#ButtonFungibles
+{
+	border:1px;
+	border-style:solid;
+	border-color:#666;
+	background:url(../img/MenuAdmin/ButtonFungibles.jpg);
+	cursor:pointer;
+	width:56px;
+	height:56px;
+}
+
+#ButtonNProc
+{
+	border:1px;
+	border-style:solid;
+	border-color:#666;
+	background:url(../img/MenuAdmin/ButtonNProc.jpg);
+	cursor:pointer;
+	width:56px;
+	height:56px;
+}
+
+#ButtonPlus
+{
+	border:1px;
+	border-style:solid;
+	border-color:#666;
+	background:url(../img/plus.jpg);
+	cursor:pointer;
+	width:30px;
+	height:30px;
+}
+
+.TancarButton
+{
+	border:1px;
+	border:none;
+	background:url(../img/TancarButton.png);
+	cursor:pointer;
+	width:172px;
+	height:40px;
+}

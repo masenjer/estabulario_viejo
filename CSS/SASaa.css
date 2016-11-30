@@ -1,0 +1,811 @@
+body{
+	vertical-align:middle;
+	text-align:center;
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+#TableOmbres{
+	padding:0;
+	border-spacing:none;
+	border:none;
+	border-collapse:collapse;
+		
+}
+
+table
+{
+	text-align:left;
+	padding:0;	
+}
+
+#portfolio {
+	list-style:none;
+	margin:0;padding:0;}
+
+.FondoBody
+{
+	background-color:#9a9899;
+}
+
+a
+{
+	text-decoration:none;
+	color:#d7d8da;	
+}
+
+.APeca
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	color:#d7d8da;
+	cursor:pointer;
+	font-weight:bold;	
+				
+}
+
+.AMidi
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	color:#d7d8da;
+	cursor:pointer;	
+	font-weight:bold;	
+}
+
+.AGran
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:16px;
+	color:#d7d8da;
+	cursor:pointer;	
+	font-weight:bold;	
+}
+
+
+#Fondo
+{
+	top:0;
+	left:0;
+	position:fixed;
+	width:100%;
+	height:100%;
+	z-index:-50;
+}
+
+#FondoAdmin
+{
+	top:0;
+	left:0;
+	position:fixed;
+	width:100%;
+	height:100%;
+	z-index:-50;
+}
+
+.fuenteMS
+{
+	font-family:Verdana, Geneva, sans-serif;	
+	font-size:12px;
+	font-weight:bold;
+	color:#FFF;
+	vertical-align:middle;
+	text-align:center;
+	cursor:pointer;	
+	
+	padding-left:5px;
+	padding-right:5px;
+	border:solid;
+	border-width:1px;
+	border-color:#999;
+}
+
+.DIVMenuS
+{
+	text-align:center;
+	cursor:pointer;	
+	display:inline;
+}
+
+#ImageMS
+{
+	width:24px;
+	height:24px;
+	border:0;
+	padding:0;
+	cursor:pointer;	
+}
+
+
+#ImageML
+{
+	width:18px;
+	height:18px;
+	border:0;
+	padding:0;
+	cursor:pointer;	
+}
+
+.fuenteTitolML /* Titol Menu Esquerre */
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;	
+	font-weight:bold;
+	color:#94163b;
+	background-color:#f3f3f3;
+}
+
+.fuenteML
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;	
+	font-weight:bold;
+	color:#666;
+	cursor:pointer;
+	background-color:#f3f3f3;
+}
+
+.fuenteTitolML_Contrast /* Titol Menu Esquerre */
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:13px;	
+	font-weight:bold;
+	color:#94163b;
+}
+
+.fuenteML_Contrast
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;	
+	font-weight:bold;
+	color:#000;
+	cursor:pointer;
+}
+
+.fuenteTitolMD /* Titol Menu Esquerre */
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;	
+	font-weight:bold;
+	background-color:#94163b;
+	color:#FFF;
+	cursor:pointer;
+
+}
+
+.fuenteMD
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;	
+	color:#666;
+	background-color:#f3f3f3;
+
+}
+
+.fuenteTitolContingut
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:13px;	
+	font-weight:bold;
+	color:#93173b;
+}
+
+.fuenteContingut
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;	
+	color:#666;
+}
+
+#DIVRutaPage
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;	
+	color:#999;
+}
+
+.fuenteCercador
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;	
+	color:#666;
+}
+
+
+.RutaCercador
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:10px;	
+	color:#93173b;
+	cursor:pointer;
+}
+
+#ButtonEditContingut
+{
+	width:25px;
+	height:25px;
+	border:0;
+	background:url(../img/ButtonEditContingut.png);
+	cursor:pointer;
+}
+
+#TAContingut
+{
+	width:100%;
+	height:100%;
+	background-color:#C93
+}
+
+#TANoticia
+{
+	width:100%;
+	height:100px;
+}
+
+.fuenteTituloGestionNoticias
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:13px;	
+	font-weight:bold;
+	color:#000;
+}
+
+.fuenteGestionNoticia
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;	
+	color:#000;
+}
+
+#ButtonNoticiaGuarda
+{
+	width:209px;
+	height:29px;
+	border:0;
+	background:url(../img/ButtonNoticiaGuarda.png);
+	cursor:pointer;
+}
+
+#ButtonNoticiaElimina
+{
+	width:209px;
+	height:29px;
+	border:0;
+	background:url(../img/ButtonNoticiaElimina.png);
+	cursor:pointer;
+}
+
+#ContListNoticias
+{
+	width:209px;
+	height:498px;
+	border:0;
+	background:url(../img/FondoLisNoticias.png);
+}
+
+.fuenteLinNoticia
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;	
+	color:#000;
+	cursor:pointer;
+}
+
+#DIVConfirmaEliminaNot
+{
+	display:none;
+	width:204px;
+	height:29px;
+	background:url(../img/ConfirmaEliminaNot.png);
+	vertical-align:middle;
+		
+}
+
+#ButtonAcceptElimina
+{
+	width:19px;
+	height:19px;
+	border:0;
+	background:url(../img/accept.png);
+	cursor:pointer;
+}
+
+#ButtonCancelaElimina
+{
+	width:19px;
+	height:19px;
+	border:0;
+	background:url(../img/cancel.png);
+	cursor:pointer;
+}
+
+.LinNoticia
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;	
+	color:#666;
+	text-align:justify;
+}
+
+#DIVGU
+{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;		
+	background:url(../img/NegroTrans.png); 
+	display:none;
+}
+
+#DIVGridGU
+{
+	width:640px; 
+	height:200px; 
+	overflow:hidden;	
+}
+
+
+/*---------------------------------------------------- Grid           */
+
+.CapGrid
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;	
+	font-weight:bold;	
+}
+
+
+
+/*---------------------------------------------------------------------- */
+
+#DIVEliminaUser
+{
+	display:none;
+		
+}
+
+#DIVBotoGU
+{
+	display:none;		
+}
+
+#TancaSessio
+{
+	height:40px; 
+	vertical-align:middle;	
+	display:none;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:16px;
+	color:#F00;
+	cursor:pointer;
+}
+
+.crd
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	vertical-align:middle;
+	text-decoration:none;	
+}
+
+
+
+
+
+
+/*--------------------------------------Maquetacio dura------------------------------------*/
+
+
+
+.PeuPagina
+{
+	background-image:URL(../img/PeuPagina.jpg);
+	height:175px;
+}
+
+.TOTALOmbraSupEsq
+{
+	width:15px;
+	height:15px;
+	background-image:URL(../img/TOTALOmbraSupEsq.png);
+	background-position:bottom;
+	background-repeat:repeat-x;
+}
+
+.TOTALOmbraSupCentral
+{
+	height:15px;
+	background-image:URL(../img/TOTALOmbraSupCentral.png);
+	background-position:bottom;
+	background-repeat:repeat-x;
+}
+.TOTALOmbraSupDreta
+{
+	width:15px;
+	height:15px;
+	background-image:URL(../img/TOTALOmbraSupDreta.png);
+	background-position:bottom;
+	background-repeat:no-repeat;
+}
+
+.TOTALOmbraEsquerra
+{
+	width:15px;
+	background-image:URL(../img/TOTALOmbraEsquerra.png)
+}
+
+.TOTALOmbraDreta
+{
+	width:15px;
+	background-image:URL(../img/TOTALOmbraDreta.png)
+}
+
+
+.TOTALOmbraInfEsq
+{
+	width:15px;
+	height:15px;
+	background-image:URL(../img/TOTALOmbraInfEsq.png);
+	background-repeat:repeat-x;
+}
+
+.TOTALOmbraInfCentral
+{
+	height:15px;
+	background-image:URL(../img/TOTALOmbraInfCentral.png);
+	background-repeat:repeat-x;
+}
+
+.TOTALOmbraInfDreta
+{
+	width:15px;
+	height:15px;
+	background-image:URL(../img/TOTALOmbraInfDreta.png);
+	background-repeat:no-repeat;
+}
+
+.CapcaSuperiorPage
+{
+	background-image:URL(../img/CapcaSuperiorPage.jpg)
+}
+
+.FonsMenuSupButton
+{
+	background-image:URL(../img/FonsMenuSupButton.jpg)
+}
+
+.FonsMenuSupInterButtonGris
+{
+	background-image:URL(../img/FonsMenuSupInterButtonGris.jpg)
+}
+
+.RayaGris
+{
+	background-color:#dadada;
+}
+
+.FonsMenuEsquerre
+{
+	background-color:#f3f3f3;
+}
+
+.OmbraInferiorMenus
+{
+	height:7px;
+	background-image:URL(../img/OmbraInferiorMenus.png)
+}
+
+.CapcaNoticies
+{
+	height:25px;
+	background-image:URL(../img/CapcaNoticies.jpg)
+}
+
+
+.SI-FILES-STYLIZED label.cabinet
+{
+width: 209px;
+height: 29px;
+background: url(../img/AnadirImagenButton.png) 0 0 no-repeat;
+
+display: block;
+overflow: hidden;
+cursor: pointer;
+}
+
+.SI-FILES-STYLIZED label.cabinet input.file
+{
+position: relative;
+cursor:pointer;
+height: 100%;
+width: auto;
+opacity: 0;
+-moz-opacity: 0;
+filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}
+
+#ButtonDestacatGuarda
+{
+	width:209px;
+	height:29px;
+	border:0;
+	background:url(../img/AnadirDestacado.png);
+	cursor:pointer;
+}
+
+#ButtonDestacatElimina
+{
+	width:209px;
+	height:29px;
+	border:0;
+	background:url(../img/EliminarDestacado.png);
+	cursor:pointer;
+}
+
+#ButtonEnDirGuarda
+{
+	width:209px;
+	height:29px;
+	border:0;
+	background:url(../img/AnadirEnlace.png);
+	cursor:pointer;
+}
+
+#ButtonEnDirElimina
+{
+	width:209px;
+	height:29px;
+	border:0;
+	background:url(../img/EliminarEnlace.png);
+	cursor:pointer;
+}
+
+.TitolHome
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	color:#FFF;	
+	font-weight:bold;
+	vertical-align:middle;	
+}
+
+.fuenteEnDirHome
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;	
+	font-weight:bold;
+	color:#666;
+	cursor:pointer;
+}
+
+.TitolContacteHome
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	color:#666;
+	font-weight:bold;	
+}
+
+.fuenteContacteHome
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:10px;	
+	color:#666;
+	text-align:left;
+}
+
+.InfoContacteHome
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:10px;	
+	color:#666;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+#portfolio{
+	cursor:pointer;
+}
+
+
+.TitolMapaWeb
+{
+	font-family:Verdana, Geneva, sans-serif;	
+	font-size:12px;
+	font-weight:bold;
+	color:#FFF;
+	vertical-align:middle;
+	text-align:center;
+	cursor:pointer;	
+}
+
+.fuenteMapaWeb
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;	
+	color:#666;
+	cursor:pointer;
+}
+
+
+a:link.OpcionsContingut
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;	
+	text-decoration:none;
+	color:#444;
+	text-height:13px;
+}
+
+.ButtonSave32
+{
+	border:none;
+	background:url(../img/Save32.jpg);
+	cursor:pointer;
+	width:32px;
+	height:32px;
+}
+
+.ButtonComandesEstat
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:10px;
+	vertical-align:text-top;
+	color:#FFF;
+	border:none;
+	background:url(../img/ButtonUsersWebEstat.jpg);
+	cursor:pointer;
+	width:66px;
+	height:19px;
+}
+
+.ButtonComandesEstatSel0
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:10px;
+	vertical-align:text-top;
+	color:#FFF;
+	border:none;
+	background:url(../img/ButtonUsersWebEstatSel0.jpg);
+	cursor:pointer;
+	width:66px;
+	height:19px;
+}
+
+.ButtonComandesEstatSel1
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:10px;
+	vertical-align:text-top;
+	color:#FFF;
+	border:none;
+	background:url(../img/ButtonUsersWebEstatSel1.jpg);
+	cursor:pointer;
+	width:66px;
+	height:19px;
+}
+
+.ButtonUsersWebEstat
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:10px;
+	vertical-align:text-top;
+	color:#FFF;
+	border:none;
+	background:url(../img/ButtonUsersWebEstat.jpg);
+	cursor:pointer;
+	width:66px;
+	height:19px;
+}
+
+
+
+.ButtonUsersWebEstatSel0
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:10px;
+	vertical-align:text-top;
+	color:#FFF;
+	border:none;
+	background:url(../img/ButtonUsersWebEstatSel0.jpg);
+	cursor:pointer;
+	width:66px;
+	height:19px;
+}
+
+.ButtonUsersWebEstatSel1
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:10px;
+	vertical-align:text-top;
+	color:#FFF;
+	border:none;
+	background:url(../img/ButtonUsersWebEstatSel1.jpg);
+	cursor:pointer;
+	width:66px;
+	height:19px;
+}
+
+
+.FondoMenuGUPublic
+{
+	font-family:Verdana, Geneva, sans-serif;	
+	font-size:11px;
+	
+	color:#FFF;
+	vertical-align:middle;
+	text-align:center;
+	background-image:URL(../img/form/FondoMenuUser.jpg);
+	padding-left:2px;
+	padding-right:2px;
+	border:solid;
+	border-width:1px;
+	border-color:#808fb2;
+	height:26px;
+}
+
+#ButtonGestioUserPublic
+{
+	border:1px;
+	border-style:solid;
+	border-color:#808fb2;
+	background:url(../img/form/ButtonPedidoPeque.jpg);
+	cursor:pointer;
+	width:21px;
+	height:21px;
+}
+
+#ButtonGestioPasswordUserPublic
+{
+	border:1px;
+	border-style:solid;
+	border-color:#808fb2;
+	background:url(../img/form/ButtonPasswordPeque.jpg);
+	cursor:pointer;
+	width:21px;
+	height:21px;
+}
+
+.ButtonSobreUserPublic0
+{
+	border:1px;
+	border-style:solid;
+	border-color:#808fb2;
+	background:url(../img/form/ButtonSobrePeque0.jpg);
+	cursor:pointer;
+	width:21px;
+	height:21px;
+}
+
+.ButtonSobreUserPublic1
+{
+	border:1px;
+	border-style:solid;
+	border-color:#808fb2;
+	background:url(../img/form/ButtonSobrePeque1.jpg);
+	cursor:pointer;
+	width:21px;
+	height:21px;
+}
+
+
+#ButtonGestioUserExit
+{
+	border:1px;
+	border-style:solid;
+	border-color:#808fb2;
+	background:url(../img/form/ButtonExitPeque.jpg);
+	cursor:pointer;
+	width:21px;
+	height:21px;
+}
+
+.fontPeuPagina
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:10px;
+	text-decoration:none;
+	color:#FFF;
+}
+

@@ -1,0 +1,398 @@
+.TitolTaula
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;	
+	font-weight:bold;
+	color:#000;
+}
+
+.fuenteTaula
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;	
+	color:#000;
+}
+
+#DIVCabTaulaComanda
+{
+	width:840px;	
+	border-style:solid;
+	border-width:1px;
+	border-color:#9e9885;
+	border-bottom:none;
+	
+}
+
+#DIVCosTaulaComanda
+{
+	width:840px;
+	height:224px;
+	overflow:auto;
+	border-style:solid;
+	border-width:1px;
+	border-color:#9e9885;
+	border-top:none;
+}
+
+.DIVDetallsComanda
+{
+	width:840px;	
+	border-style:solid;
+	border-width:1px;
+	border-color:#9e9885;
+	padding:5px;	
+}
+
+.RecuadreAdmin
+{
+	border-style:solid;
+	border-width:1px;
+	border-color:#9e9885;
+	padding:5px;	
+}
+
+.DIVCuadratAmbBordeGris
+{		
+	border-style:solid;
+	border-width:1px;
+	border-color:#9e9885;
+	padding:5px;	
+}
+
+
+table.jquery_columnSizing{
+	table-layout: fixed;
+	width : 100%; 
+	}
+table.jquery_columnSizing tr td{
+	overflow : hidden;
+	}
+	
+.CapcaGrid{
+	background:url(../img/Grid/FonsCapcaGrid.png);
+	border-style:solid;
+	border-width:1px;
+	border-color:#9e9885;
+	border-top:none;
+	border-left:none;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	color:#FFF;
+	vertical-align:middle;
+	height:23px;
+	text-align:center;
+	cursor:pointer;
+}
+
+.GridLine0{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	padding-left:5px;
+	padding-right:5px;
+	height:20px;
+	vertical-align:middle;
+	text-align:left;
+}
+
+.GridLine1{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	background:url(../img/Grid/LineaGridGroga.png);
+	padding-left:5px;
+	padding-right:5px;
+	height:20px;
+	vertical-align:middle;
+	text-align:left;
+	
+}
+.GridLineCapca{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	background-color:#DDD;
+	height:20px;
+	vertical-align:middle;
+	text-align:left;
+	border-bottom:solid;
+	border-top:solid;
+	border-color:#999;
+	border-width:1px;
+	padding-right:10px;
+}
+
+.DIVGridLineCapca{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	height:20px;
+	vertical-align:middle;
+	text-align:left;
+	width:100%; 
+	height:100%;
+	background:url(../img/CapcaRelleu2.png);
+	padding-left:5px;
+	padding-right:5px;
+	cursor:pointer;
+}
+
+
+.GridLine2{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	background:url(../img/Grid/LineaGridGroga.png);
+	padding-left:5px;
+	padding-right:5px;
+	height:20px;
+	vertical-align:middle;
+	border-bottom:solid;
+	border-color:#FC0;
+	border-width:1px;
+}
+.GridLine3{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	background:url(../img/Grid/LineaGridVerda.png);
+	padding-left:5px;
+	padding-right:5px;
+	height:20px;
+	vertical-align:middle;
+	border-bottom:solid;
+	border-color:#6C0;
+	border-width:1px;
+}
+.GridLine4{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	background:url(../img/Grid/LineaGridVermella.png);
+	padding-left:5px;
+	padding-right:5px;
+	height:20px;
+	vertical-align:middle;
+	border-bottom:solid;
+	border-color:#C36;
+	border-width:1px;
+}
+
+.GridLine5{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	background:url(../img/Grid/LineaGridBlava.png);
+	padding-left:5px;
+	padding-right:5px;
+	height:20px;
+	vertical-align:middle;
+	border-bottom:solid;
+	border-color:#5F7CA0;
+	border-width:1px;
+}
+
+.GridLine6{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	background:#090;
+	padding-left:5px;
+	padding-right:5px;
+	height:20px;
+	vertical-align:middle;
+	border-bottom:solid;
+	border-color:#C36;
+	border-width:1px;
+	color:#FFF;
+}
+
+.GridLine7{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	background-color:#C00;
+	padding-left:5px;
+	padding-right:5px;
+	height:20px;
+	vertical-align:middle;
+	border-bottom:solid;
+	border-color:#C36;
+	border-width:1px;
+	color:#FFF;
+}
+
+
+
+.TotalDetallProd{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	background-color:#777;
+	color:#FFF;
+	border:none;
+	padding-left:5px;
+	padding-right:5px;
+	height:20px;
+	vertical-align:middle;
+}
+
+.TotalTaulaProd{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	background-color:#000;
+	color:#FFF;
+	border:none;
+	padding-left:5px;
+	padding-right:5px;
+	height:20px;
+	vertical-align:middle;
+}
+
+.CercaGrid{
+	border-style:solid;
+	background:#FFF;
+	border-width:1px;
+	border-color:#9e9885;
+	border-top:none;
+	border-left:none;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	color:#545454;
+	vertical-align:middle;
+	height:23px;
+	text-align:center;
+	cursor:pointer;
+}
+
+.CercaSelect{
+	border-style:solid;
+	background:#FFF;
+	border-width:1px;
+	border-color:#9e9885;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	color:#545454;
+	vertical-align:middle;
+	text-align:left;
+	position:fixed;
+}
+
+.TRSelect0{
+	padding:0px;
+	padding-left:5px;
+	cursor:pointer;
+	background:URL(../img/Grid/FondoDesmarcar.jpg);
+	height:23px;
+	color:#FFF;
+	font-weight:bold;
+}
+
+.TRSelect1{
+	padding:0px;
+	padding-left:5px;
+	cursor:pointer;
+	background:URL(../img/Grid/FondoMarcar.jpg);
+	height:23px;
+	color:#FFF;
+	font-weight:bold;
+}
+
+.TRSelect0Peque{
+	padding:0px;
+	padding-left:5px;
+	cursor:pointer;
+	background:URL(../img/Grid/FondoDesmarcar.jpg);
+	height:23px;
+	color:#FFF;
+}
+
+.TRSelect1Peque{
+	padding:0px;
+	padding-left:5px;
+	cursor:pointer;
+	background:URL(../img/Grid/FondoMarcar.jpg);
+	height:23px;
+	color:#FFF;
+}
+
+.TRSelect{
+	padding:5px;
+	cursor:pointer;
+	padding-bottom:10px;
+}
+
+.txtSearch{
+	width:76px;
+	border:none;
+	background:none;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	color:#545454;
+}
+
+.txtSearchPeque{
+	width:40px;
+	border:none;
+	background:none;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	color:#545454;
+}
+
+.FlechaCapca{
+	vertical-align:middle;
+	text-align:right;
+	position:absolute;
+	top:-5px;
+}
+
+
+#DIVCabTaulaGestioUsersWeb
+{
+	width:840px;	
+	border-style:solid;
+	border-width:1px;
+	border-color:#9e9885;
+	border-bottom:none;	
+}
+
+#DIVCosTaulaGestioUsersWeb
+{
+	width:840px;
+	height:224px;
+	overflow:auto;
+	border-style:solid;
+	border-width:1px;
+	border-color:#9e9885;
+	border-top:none;
+}
+
+#DIVCabTaulaGestioInvestigador
+{
+	border-style:solid;
+	border-width:1px;
+	border-color:#9e9885;
+	border-bottom:none;	
+}
+
+#DIVCosTaulaGestioInvestigador
+{
+	height:224px;
+	overflow:auto;
+	border-style:solid;
+	border-width:1px;
+	border-color:#9e9885;
+	border-top:none;
+}
+
+#DIVCabTaulaGestioProcediment
+{
+	border-style:solid;
+	border-width:1px;
+	border-color:#9e9885;
+	border-bottom:none;	
+}
+
+#DIVCosTaulaGestioProcediment
+{
+	height:224px;
+	overflow:auto;
+	border-style:solid;
+	border-width:1px;
+	border-color:#9e9885;
+	border-top:none;
+}
+

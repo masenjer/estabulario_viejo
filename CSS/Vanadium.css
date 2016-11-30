@@ -1,0 +1,72 @@
+input.vanadium-invalid, select.vanadium-invalid, textarea.vanadium-invalid {
+  border-color: red !important;
+  border-style: solid !important;
+    	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;	
+
+}
+
+input.vanadium-valid, select.vanadium-valid, textarea.vanadium-valid {
+  border-color: #0F0 !important;
+  border-style: solid !important;
+    	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;	
+
+}
+
+.vanadium-message-value {
+  font-style: italic;
+  text-decoration: underline;
+    	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;	
+
+}
+
+.vanadium-advice {
+  font-size: 13px;
+    	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;	
+
+}
+
+.vanadium-advice.vanadium-invalid, .vanadium-advice.vanadium-invalid * {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;	
+  color: red;
+}
+
+input.vanadium-valid {
+	color:#060;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;	
+}
+
+input.vanadium-valid ~ .vanadium-valid-advice {
+  display: inline !important;
+  color: green;
+}
+
+.container {
+  border-color: #00F;
+  border-style: solid;
+  border-width: 1px;
+  width: auto;
+  	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;	
+
+}
+
+.container.vanadium-valid {
+  border-color: #0F0 !important;
+    	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;	
+
+}
+
+.container.vanadium-invalid {
+  border-color: #F00 !important;
+    	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;	
+
+}/* CSS Document */
+
