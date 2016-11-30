@@ -408,8 +408,11 @@ function GuardaIntTecCruce(form)
 	
 	if (ValidaIntTecCruce(CC,NumProc,FR,HR,LR,VM,Sacrifici,EsH,CeH,EsM,CeM,EH,SGH,EM,SGM,FC,HC,T,FTD,FTH,S,FS,rV,aux,form))
 	{
+		if (confirm("Has sol·licitat un encreuament continuo al no especificar una data de recollida/utilització. Estàs segur/a de voler continuar amb la sol·licitud?")){
+			$.post("PHPForm/"+form+"Guarda.php",{NumProc:NumProc,CC:CC,FR:FR,HR:HR,LR:LR,VM:VM,Sacrifici:Sacrifici,EsH:EsH,CeH:CeH,EsM:EsM,CeM:CeM,EH:EH,SGH:SGH,EM:EM,SGM:SGM,FC:FC,HC:HC,T:T,FTD:FTD,FTH:FTH,S:S,FS:FS,rV:rV,aux:aux,Obs:Obs},LlegadaGuardaIntTec);	
+		}
 		//alert("entro");
-		$.post("PHPForm/"+form+"Guarda.php",{NumProc:NumProc,CC:CC,FR:FR,HR:HR,LR:LR,VM:VM,Sacrifici:Sacrifici,EsH:EsH,CeH:CeH,EsM:EsM,CeM:CeM,EH:EH,SGH:SGH,EM:EM,SGM:SGM,FC:FC,HC:HC,T:T,FTD:FTD,FTH:FTH,S:S,FS:FS,rV:rV,aux:aux,Obs:Obs},LlegadaGuardaIntTec);	
+		
 	}
 }
 
@@ -420,7 +423,7 @@ function ValidaIntTecCruce(CC,NumProc,FR,HR,LR,VM,Sacrifici,EsH,CeH,EsM,CeM,EH,S
 	
 	//alert(FS);
 	var error = ValidaDadesEcon(CC,NumProc);
-	if (error) error = ValidaRecollida(FR,HR,LR,VM,Sacrifici);
+	if (error && FR) error = ValidaRecollida(FR,HR,LR,VM,Sacrifici);
 
 	if (!EsH){alert("Has d' indicar una esp"+String.fromCharCode(232)+"cie de femella");error = false;}
 	if (!CeH){alert("Has d' indicar una soca de femella");error = false;}
@@ -465,7 +468,7 @@ function ValidaIntTecCruce(CC,NumProc,FR,HR,LR,VM,Sacrifici,EsH,CeH,EsM,CeM,EH,S
 	
 	if ((T==1)&&(S==0)&&FTH&&FR&&RestaFechas(FTH,FR)){alert("La data de recollida ha de ser superior a la data final per mirar els taps vaginals");error=false;}
 
-	if ((S==1)&&FS&&RestaFechas(FS,FR)){
+	if (FR&&(S==1)&&FS&&RestaFechas(FS,FR)){
 		//console.log("FS-FR",FS+"-"+FR);
 		alert("La data de recollida ha de ser superior a la data de separaci"+String.fromCharCode(243));error=false;}
 

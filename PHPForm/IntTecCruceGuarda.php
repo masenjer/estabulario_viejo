@@ -56,7 +56,7 @@ else $FS = "NULL";
 $IdCC = ComandaCap(7,$NProc,$CC);
 //DadesEcon($IdCC,$Resp, $CC, $RC);
 if ($Obs) Observacions($IdCC,$Obs);
-Recollida($IdCC,$FR,$HR,$LR,$VM,$SAC);
+if ($FR) Recollida($IdCC,$FR,$HR,$LR,$VM,$SAC);
 if ($FTD) MTV($IdCC,$FTD, $FTH);
 if ($FS) Separar($IdCC,$FS);
 
