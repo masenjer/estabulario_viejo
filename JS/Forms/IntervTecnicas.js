@@ -155,9 +155,13 @@ function GuardaIntTec(form)
 function LlegadaGuardaIntTec(data)
 {
 	//alert(data);
-	alert("La seva petici"+ String.fromCharCode(243) +" ha estat cursada correctament. Pot veure l'estat de la seva comanda al gestor de comandes, polsant el bot"+ String.fromCharCode(243) +" groc situat a la dreta del men"+ String.fromCharCode(250) +" superior d'aquesta mateixa plana");
+	if (!data){
+		alert("La seva petici"+ String.fromCharCode(243) +" ha estat cursada correctament. Pot veure l'estat de la seva comanda al gestor de comandes, polsant el bot"+ String.fromCharCode(243) +" groc situat a la dreta del men"+ String.fromCharCode(250) +" superior d'aquesta mateixa plana");
 
 	TancaIntervTecnicas(); 
+	}
+	else{alert("Ha ocorregut un error al realitzar la comanda");}
+
 }
 
 
@@ -605,6 +609,7 @@ function CreaFilaIntTecAnimales(id, form)
 		$("#RowActualAnim").val(rowAcual+1);
 
 		setTimeout(quitaSDJaulaAnim, 1000);
+		setTimeout(function (){setHelpDialog(id,form)}, 1000);
 	}
 }
 
@@ -664,16 +669,28 @@ function MostraTDIntTecAnimalesI(id,form)
 
 function MostraTDIntTecAnimalesD(id,form)
 {
+	var mensaje = 	"Formats acceptats: </br>"+
+					"<ul>"+
+						"<li>Enumeració d'animals ID: a,z,c,x,k (separats per ,) </li>"+
+						"<li>Rangs d'animals ID (ambdós inclosos): b-n (fent servir -) </li>"+
+						"<li>Es pot introduir un rang en una animenumeració: e,x,a-j,n </li>"+					
+						"<li>*Nota: el número d'animals ha de coincidir amb el camp quantitat del bloc "+id+" </li>"+					
+					"<ul>"+
+					"</ul>";					
+
 	return ''+
 	'<table width="100%" cellspacing="0" cellpadding="2" border="0">'+
-    	'<tr>'+
-        	'<td align="left">Animal ID</td>'+
-            '<td align="left"><input type="text" id="RatonID'+id + form+'"  class="fuenteForm" onChange="ModificaQuantitatAnimalsIntecGabies('+id+');" /></td>'+
-        '</tr>'+
-    	'<tr>'+
+     	'<tr>'+
         	'<td align="left">Quantitat</td>'+
-            '<td align="left"><input type="text" id="Cantidad'+id + form+'" class="fuenteForm"  onKeyPress="ModificaRatonIDAnimalsIntecGabies('+id+');"  style="width:115px"/></td>'+
+            '<td align="left"><input type="text" id="Cantidad'+id + form+'" class="fuenteForm"   style="width:115px"/></td>'+
         '</tr>'+
+      	'<tr>'+
+        	'<td align="left">Animal ID'+
+        		'<div id="helpMessage'+id + form+'" class="helparrow_box">'+mensaje+'</div>'+
+            '</td>'+
+            '<td align="left"><textarea id="RatonID'+id + form+'"  class="fuenteForm" style="width:115px" /></td>'+            	
+        '</tr>'+
+
     '</table>';
 }	
 
@@ -681,10 +698,6 @@ function SeleccionaEspecieIntecJaulas(id,form)
 {
 	OmpleCepas(id,"Jaula"+form);
 	CreaFilaIntTecJaulas(id,form);
-	
-		
-	
-	
 }
 
 
@@ -729,6 +742,18 @@ function CreaFilaIntTecJaulas(id, form)
 
 function quitaSDJaulaAnim (){
 	$( ".selectJaulasAnim option[value='27']" ).remove();	
+}
+
+function setHelpDialog(id, form){
+
+	$('#RatonID'+id + form).focusin(function(){
+		//alert(id);
+		$("#helpMessage"+id + form).show();
+	});
+
+	$('#RatonID'+id + form).focusout(function(){
+		$("#helpMessage"+id + form).hide();
+	});
 }
 
 function MostraTDIntTecJaulas(id,form)
@@ -878,6 +903,13 @@ function ValidaJaulasAnimales(CC,NumProc,FR,HR,VM,Sacrifici,RD,FD,HD,aux1,aux2)
 
 	var buit = 0;
 
+	var animenum = [];
+	var rango = [];
+	var inicio = 0;
+	var final = 0;
+
+	var numAnimBloc = 0;
+
 	if(!RD){
 		alert("Has d'indicar si hi haur"+String.fromCharCode(224)+" o no devoluci"+String.fromCharCode(243)+" d' animals i/o g"+String.fromCharCode(224)+"bies");	
 	}
@@ -918,7 +950,55 @@ function ValidaJaulasAnimales(CC,NumProc,FR,HR,VM,Sacrifici,RD,FD,HD,aux1,aux2)
 		{
 			alert("La quantitat al bloc " + eval(i) + " ha de ser un n"+String.fromCharCode(250)+"mero enter");
 			error = false;
-		} 
+		}
+
+		///c[2] => Numeracion de los animales
+		animenums = c[2].split(",");
+
+		numAnimBloc = 0;
+		animenums.forEach(function (animenum){
+			
+			if (animenum){ //Para asegurarnos de que no dejan un espacio entre comas vacío
+				rango = animenum.split("-");
+				//console.log("longitud:"+rango.length  )
+				if (rango.length > 2){ //Existe más de un guión -> error
+					alert("El format text introduït al camp Animal ID del bloc "+eval(i)+" no compleix el format permés perque hi ha un interval incorrecte amb dos guions");
+					return false;
+				}else if(rango.length > 1){//Hay un rango con formato correcto
+					inicio  = rango[0];
+					final = rango[1];
+
+					if (!isNaN(inicio)&&!isNaN(final)&&(inicio%1==0)&&(final%1==0)){
+						numAnimBloc += Math.abs(final - inicio) +1;
+					}
+					else{ //O no es un número o no es entero
+						alert("El format text introduït al camp Animal ID del bloc "+eval(i)+" no compleix el format permés perque en el interval apareixen dades que no son números enters");
+						return  false;
+					}
+				}else if(rango.length == 1){
+					//console.log(rango[0]);
+					if (!isNaN(rango[0])&&(rango[0]%1==0)){
+						numAnimBloc ++; // es un elemento en la enumeración y suma 1
+					}
+					else{ //O no es un número o no es entero
+						alert("El format text introduït al camp Animal ID del bloc "+eval(i)+" no compleix el format permés perque apareixen dades que no son números enters");
+						return false;
+					}
+				}
+			} 
+
+			//console.log("numAnimBloc:"+numAnimBloc+", cant"+c[3]);
+
+			
+
+		});
+
+		if(numAnimBloc != c[3]){
+			alert("Error al bloc "+eval(i)+": El número d'animals introduït al camp Animal ID no coincideix amb el número introduït al camp quantitat");
+			error = false;
+		}
+		
+
 		//if ((c[1])&&(!c[2])&&((!c[3]))) error = false;	
 
 		buit ++;				

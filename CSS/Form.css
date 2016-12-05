@@ -139,3 +139,31 @@ input
 	width:100%;
 	height:60px;
 }
+
+.helparrow_box {
+	position: absolute;
+	background: #f4ff94;
+	width: 400px;
+	
+	margin-top: 15px;
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	display:none;
+
+}
+
+.helparrow_box:after {
+	bottom: 100%;
+	left: 30%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(181, 181, 181, 0);
+	border-bottom-color: #f4ff94;
+	border-width: 10px;
+	margin-left: -10px;
+}

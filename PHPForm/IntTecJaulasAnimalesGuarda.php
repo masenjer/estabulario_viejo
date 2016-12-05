@@ -39,11 +39,45 @@ if ($FD) Devolucio($IdCC,$FD,$HD,0);
 $v = explode("#",$aux1);
 
 for ($i=1; $i<count($v); $i++)
-{
+{	
 	$cadena = explode("|",$v[$i]);
 
+	$animenums = explode(",",$cadena[2]);
+	//echo "cadena[2]:".$animenums;
+
+	//print_r( $animenums);
+	foreach($animenums as $anim){		
+		$rango = explode("-",$anim);
+
+		//print_r($rango);
+		//echo count($rango);
+
+		if (count ($rango) > 1){ //Es un rando de valores
+			if ($rango[1]>$rango[0]){
+				$principio = $rango[0];
+				$fin = $rango[1]+1;
+			} 
+			else{
+				$principio = $rango[1];
+				$fin = $rango[0]+1;
+			}
+
+			for ($i=$principio; $i<$fin; $i++){
+				//echo "||||".$principio.":".$fin."||||";
+				if ($cadenaSQL) $cadenaSQL .= ",";
+				$cadenaSQL .= " ($IdCC, ".$cadena[1].", ".$i.", '1',". $_SESSION["IdUser"].",0)";
+			}
+		}
+		else if (count($rango == 1)){ //Es un valor enumerado entre comas
+			if ($cadenaSQL) $cadenaSQL .= ",";
+			$cadenaSQL .= " ($IdCC, ".$cadena[1].", ".$rango[0].", '1',". $_SESSION["IdUser"].",0)";
+		}
+
+	}
+
 	$SQL = "INSERT INTO JaulasAnimLin(IdComandaCap, IdSoca, RatonID, Cantidad, IdUser, CT)   
-			VALUES ($IdCC, ".$cadena[1].", '".$cadena[2]."', ".$cadena[3].",". $_SESSION["IdUser"].",0)";
+			VALUES ".$cadenaSQL;
+
 	$result = mysql_query($SQL,$oConn);
 	
 	//echo $SQL;
@@ -66,5 +100,5 @@ for ($i=1; $i<count($v); $i++)
 
 ///////////////////////////////////////////
 //echo $SQL . "%%$%%$%" . $_SESSION["IdUser"];
-echo "Resgistro guardado!";
+//echo "Resgistro guardado!";
 ?>
