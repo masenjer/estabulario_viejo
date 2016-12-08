@@ -7,24 +7,24 @@ function FechaFutura(fecha)
 	var diaSemana = dia_semana(hoy);
 	
 	//console.log("diaSemana",diaSemana);
-/*	switch (diaSemana) 
+	switch (diaSemana) 
 	{
 		case "Lunes": 	
 		case "Martes": 	
 		case "Miércoles":	f = f.addDays(1);
 							break; 	
 		
-		case "Jueves":		f = f.addDays(5);
+		case "Jueves":		f = f.addDays(4);//cambiar a 3 
 							break; 
-		case "Viernes":		f = f.addDays(4);
+		case "Viernes":		f = f.addDays(3);
 							break; 
-		case "Sábado":		f = f.addDays(3);
+		case "Sábado":		f = f.addDays(2);
 							break; 	
 		
-		case "Domingo":		f = f.addDays(2);
+		case "Domingo":		f = f.addDays(1);
 							break; 	
 	}
-*/
+/*
 	switch (diaSemana) 
 	{
 		case "Lunes": 	
@@ -40,7 +40,7 @@ function FechaFutura(fecha)
 		case "Domingo":		f = f.addDays(2);
 							break; 	
 	}
-	
+*/	
 	var FS = (f.getDate()) + "/" + (f.getMonth() +1) + "/" + f.getFullYear();	
 //	console.log("fecha",fecha+"-----"+FS);
 
