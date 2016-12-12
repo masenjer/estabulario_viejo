@@ -14,7 +14,7 @@ function FechaFutura(fecha)
 		case "Miércoles":	f = f.addDays(1);
 							break; 	
 		
-		case "Jueves":		f = f.addDays(4);//cambiar a 3 
+		case "Jueves":		f = f.addDays(3); 
 							break; 
 		case "Viernes":		f = f.addDays(3);
 							break; 
