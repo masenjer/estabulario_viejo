@@ -82,6 +82,6 @@ $result = mysql_query($SQL,$oConn);
 
 
 ///////////////////////////////////////////
-echo $SQL . "%%$%%$%" . $_SESSION["IdUser"];
+//echo $SQL . "%%$%%$%" . $_SESSION["IdUser"];
 //echo "Resgistro guardado!";
 ?>
