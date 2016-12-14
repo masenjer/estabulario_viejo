@@ -6,7 +6,7 @@ $result = mysql_query($SQL,$oConn);
 
 while ($row = mysql_fetch_array($result))
 {
-	$cadena .= $row["Email"]."; ";
+	$cadena .= $row["Email"].", ";
 }
 
 //echo $cadena;
