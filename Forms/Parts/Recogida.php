@@ -1,10 +1,15 @@
 <?php 
 function MostraRecogida($form)
 {
+    if ($form != "IntTecCruce"){
+        $obligatori = '<font class="ast">*</font>';   
+    }
+    else $obligatori = "";
+
 ?>
 <table width="100%" border="0" class="fuenteForm">
 	<tr>
-    	<td class="fuenteFormTitol" align="left">RECOLLIDA / UTILIZACI&Oacute; <br />(Recordeu, &eacute;s com&uacute; per a tots els blocs)<font class="ast">*</font> </td>
+    	<td class="fuenteFormTitol" align="left">RECOLLIDA / UTILIZACI&Oacute; <br />(Recordeu, &eacute;s com&uacute; per a tots els blocs)<?php echo $obligatori ?></td>
     </tr>
     <tr>
     	<td height="15px"></td>
