@@ -673,7 +673,7 @@ function MostraTDIntTecAnimalesD(id,form)
 					"<ul>"+
 						"<li>Enumeració d'animals ID: a,z,c,x,k (separats per ,) </li>"+
 						"<li>Rangs d'animals ID (ambdós inclosos): b-n (fent servir -) </li>"+
-						"<li>Es pot introduir un rang en una animenumeració: e,x,a-j,n </li>"+					
+						"<li>Es pot introduir un rang en una enumeració: e,x,a-j,n </li>"+					
 						"<li>*Nota: el número d'animals ha de coincidir amb el camp quantitat del bloc "+id+" </li>"+					
 					"<ul>"+
 					"</ul>";					
