@@ -21,7 +21,7 @@ function MostraMenuCapcalera()
         <td width="10px"></td>
         <td class="APeca" ><a href="http://intranet.uab.es" target="_blank"><font color="#d7d8da">Intranet</font></a></td>
         <td width="10px"></td>
-        <td class="APeca"><a href="https://siastd.uab.es/pcde/">Directori</font></a></td>
+        <td class="APeca"><a href="https://siastd.uab.es/pcde/" target="_blank"><font color="#d7d8da">Directori</font></a></td>
         <td width="20px"></td>
         <td class="APeca" align="left"><font color="#d7d8da">CERCADOR</font><div id="ResultatCerca" style="position:fixed; width:300px; height:90%; overflow:auto; z-index:1000; display:none" align="left" ></div></td>
         <td class="APeca" width="20px"><input type="text" class="fuenteContingut" id="TextCerca" onkeyup="Cercador();" onblur= "$('#ResultatCerca').hide('slow')"/></td>
