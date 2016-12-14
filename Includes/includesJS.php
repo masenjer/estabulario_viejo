@@ -135,6 +135,7 @@ if (($_SESSION["InformeDiari"])||($_SESSION["InformeFacturacio"]))
     <script src="JS/Informes/InformeDiari.js" type="text/javascript"> </script>
     <script src="JS/Informes/InformeStock.js" type="text/javascript"> </script>
     <script src="JS/Informes/InformeAnualMoviments.js" type="text/javascript"> </script>
+    <script src="JS/Informes/InformeDifusio.js" type="text/javascript"> </script>
 <?php 
 }
 ?>    

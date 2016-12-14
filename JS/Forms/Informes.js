@@ -26,3 +26,9 @@ function ImprimeixInformeStockq()
 	window.open('PHPForm/Informes/InformeStock.php');
 }
 
+function ImprimeixLlistaDifusioEmails()
+{
+	//alert(1);
+	window.open('PHPForm/Informes/ListaDifusion.php');
+}
+

@@ -72,7 +72,8 @@ if (($_SESSION["InformeDiari"])||($_SESSION["InformeFacturacio"]))
 	include("Forms/Parts/InformeDiari.php");
 	include("Forms/Parts/InformeFacturacio.php");
 	include("Forms/Parts/InformeStock.php");
-	include("Forms/Parts/InformeAnualStock.php");
+	include("Forms/Parts/InformeAnualStock.php");	
+	include("Forms/Parts/InformeDifusionEmail.php");
 } 
 if ($_SESSION["PEmail"])
 {

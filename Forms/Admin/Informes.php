@@ -57,8 +57,11 @@ function MostraTOTGestioInformes()
                     <tr>                    	
                         <td align="left"><?php if ($_SESSION["InformeDiari"]) MontaCuadreVerd('MostraInformeStock',''); ?></td>
                     </tr>
-                    <tr>                    	
+                    <tr>                        
                         <td align="left"><?php if ($_SESSION["InformeDiari"]) MontaCuadreVerd('MostraInformeAnualStock',''); ?></td>
+                    </tr>
+                    <tr>                       
+                        <td align="left"><?php if ($_SESSION["InformeDiari"]) MontaCuadreVerd('MostraInformeDifusionEmail',''); ?></td>
                     </tr>
                 </table>
             </div>        	
