@@ -1,4 +1,5 @@
 <?php
+//error_reporting('E_ALL');
 include("../../rao/EstabulariForm_con.php");
 include("../../rao/PonQuita.php"); 
 include("../../rao/Accents.php"); 

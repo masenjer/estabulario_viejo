@@ -37,10 +37,10 @@ $resultado = '
 			INNER JOIN ComandaCap CC 
 			ON CC.IdComandaCap = EA.IdComandaCap
 							 
-			WHERE 
-			P.Fecha = '".$fecha."'" ; 
+			WHERE  
+			EA.Estado = 1 
+			AND P.Fecha = '".$fecha."'"; 
 
-//echo $SQL;			
 	$result = mysql_query($SQL,$oConn);
 
 	$i = 0;
