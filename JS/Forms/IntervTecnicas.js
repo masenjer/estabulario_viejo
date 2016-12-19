@@ -912,6 +912,7 @@ function ValidaJaulasAnimales(CC,NumProc,FR,HR,VM,Sacrifici,RD,FD,HD,aux1,aux2)
 
 	if(!RD){
 		alert("Has d'indicar si hi haur"+String.fromCharCode(224)+" o no devoluci"+String.fromCharCode(243)+" d' animals i/o g"+String.fromCharCode(224)+"bies");	
+		error = 1;
 	}
 	if ((RD == "1")&&(!FD)){
 		alert("Has d' indicar una data de devoluci"+String.fromCharCode(243)+"");
