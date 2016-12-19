@@ -2,7 +2,7 @@
 
 function RellenaContenidosStock(){
 	
-	include("../../../rao/EstabulariForm_con.php");
+	include("../../rao/EstabulariForm_con.php");
 	include("ComprovaStock.php"); 
 	
 	session_start();
@@ -20,7 +20,7 @@ function RellenaContenidosStock(){
 	
 	//echo $SQL;	
 			
-	$result = mysql_query($SQL,$oConn);
+	$result = mysql_query($SQL);
 	
 
 	while ($row = mysql_fetch_array($result))

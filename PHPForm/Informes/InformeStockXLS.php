@@ -52,22 +52,23 @@ $objPHPExcel->getActiveSheet()->setAutoFilter("A3:I3");
 	$UniFam = 0;
 	$i = 4;
 	
-	$SQL = "SELECT DISTINCT AC.FechaNacimiento, AC.IdProcediment, P.NumProc, E.NomEspecie_ca, S.NomSoca, S.IdSoca, 						P.NumProc
-			FROM AnimalMOVCap AC 
-			LEFT JOIN Procediment P ON (AC.IdProcediment = P.IdProcediment)
-			LEFT JOIN (Soca S LEFT JOIN Especie E ON E.IdEspecie = S.IdEspecie)
-					ON S.IdSoca = AC.IdSoca
-			ORDER BY E.NomEspecie_ca, S.NomSoca, AC.FechaNacimiento, P.NumProc	
+	$SQL = "SELECT DISTINCT AC.FechaNacimiento, AC.IdProcediment, P.NumProc, E.NomEspecie_ca, S.NomSoca, AC.IdSoca, P.NumProc
+            FROM AnimalMOVCap AC 
+            INNER JOIN Procediment P ON (AC.IdProcediment = P.IdProcediment)
+            INNER JOIN (Soca S LEFT JOIN Especie E ON E.IdEspecie = S.IdEspecie)
+                    ON S.IdSoca = AC.IdSoca
+            ORDER BY E.NomEspecie_ca, S.NomSoca, AC.FechaNacimiento, P.NumProc  
 				";
 	
 	//echo $SQL;	
 			
-	$result = mysql_query($SQL,$oConn);
+	$result = mysql_query($SQL);
 	
 
 	while ($row = mysql_fetch_array($result))
 	{
-		$data =  ComprovaStock($row["IdSoca"], $row["IdProcediment"], $row["FechaNacimiento"], 0);
+
+        $data =  ComprovaStock($row["IdSoca"], $row["IdProcediment"], $row["FechaNacimiento"], 0);
 		$cadena = explode ("|",$data);
 		
 		$dataR =  ComprovaStock($row["IdSoca"], $row["IdProcediment"], $row["FechaNacimiento"], 1);
@@ -75,6 +76,8 @@ $objPHPExcel->getActiveSheet()->setAutoFilter("A3:I3");
 		
 		if (($cadena[0]>0)||($cadena[1]>0)||($cadenaR[0]>0)||($cadenaR[1]>0))
 		{
+
+           // echo "cepa:".$row["NomEspecie_ca"].",".$row["NomSoca"].",".$cadena[0].",".$cadena[1].",".$cadenaR[0].",".$cadenaR[1];
 			
 			if ($Proc == "9999") $Proc = "";
 		
@@ -98,9 +101,9 @@ $objPHPExcel->getActiveSheet()->setAutoFilter("A3:I3");
 	}
 	
 	
-	//echo $resultado;
-	//return $resultado;
-
+	/*echo $resultado;
+	return $resultado;
+*/
 	
 
 
@@ -238,5 +241,11 @@ header('Cache-Control: max-age=0');
 $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
 $objWriter->save('php://output');
 exit;
+
+
+
+
+
+
 
 ?>

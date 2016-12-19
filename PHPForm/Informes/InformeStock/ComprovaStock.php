@@ -1,51 +1,53 @@
 <?php
 function ComprovaStock($id, $NProc, $DN, $res)
 {
-	include("../../../rao/EstabulariForm_con.php");
+	include("../../rao/EstabulariForm_con.php");
 	
-	$SQL = "SELECT UniMas, UniFam, TipusMOV  
+	$SQLStock = "SELECT UniMas, UniFam, TipusMOV  
 			FROM AnimalMOVCap 
 			WHERE IdProcediment = $NProc 
 			AND IdSoca = $id 
 			AND FechaNacimiento = '$DN' 
 			ORDER BY IdAnimalMOVCap ASC";
-	$result = mysql_query($SQL,$oConn);
+	if(!$resultStock = mysql_query($SQLStock)) die("error:"+mysql_error());
+	
+	//echo $SQLStock;
 	
 	$UM = 0;
 	$UH = 0;
 	$UMR = 0;
 	$UHR = 0;
 	
-	while ($row = mysql_fetch_array($result))
+	while ($row22 = mysql_fetch_array($resultStock))
 	{			
-		switch($row["TipusMOV"])
+		switch($row22["TipusMOV"])
 		{
-			case "1": 	$UM = $row["UniMas"];
-						$UH = $row["UniFam"];
+			case "1": 	$UM = $row22["UniMas"];
+						$UH = $row22["UniFam"];
 						$UMR = 0;
 						$UHR = 0;
 						break;	
 			case "2": 	
-			case "3": 	$UM += $row["UniMas"];
-						$UH += $row["UniFam"];
+			case "3": 	$UM += $row22["UniMas"];
+						$UH += $row22["UniFam"];
 						break;	
 			case "4": 		
 			case "5":
 			case "8":   //Excedent
 			case "9": 	//Sexat
-						$UM -=  $row["UniMas"];
-						$UH -=  $row["UniFam"];
+						$UM -=  $row22["UniMas"];
+						$UH -=  $row22["UniFam"];
 						break;	
-			case "6": 	$UM -= $row["UniMas"];
-						$UH -= $row["UniFam"];
-						$UMR += $row["UniMas"];
-						$UHR += $row["UniFam"];
+			case "6": 	$UM -= $row22["UniMas"];
+						$UH -= $row22["UniFam"];
+						$UMR += $row22["UniMas"];
+						$UHR += $row22["UniFam"];
 						break;
 			
-			case "7": 	$UM += $row["UniMas"];
-						$UH += $row["UniFam"];
-						$UMR -= $row["UniMas"];
-						$UHR -= $row["UniFam"];
+			case "7": 	$UM += $row22["UniMas"];
+						$UH += $row22["UniFam"];
+						$UMR -= $row22["UniMas"];
+						$UHR -= $row22["UniFam"];
 						break;
 		}
 	}

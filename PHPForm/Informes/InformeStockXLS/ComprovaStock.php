@@ -9,7 +9,7 @@ function ComprovaStock($id, $NProc, $DN, $res)
 			AND IdSoca = $id 
 			AND FechaNacimiento = '$DN' 
 			ORDER BY IdAnimalMOVCap ASC";
-	$result = mysql_query($SQL,$oConn);
+	$result = mysql_query($SQL);
 	
 	$UM = 0;
 	$UH = 0;
@@ -17,7 +17,8 @@ function ComprovaStock($id, $NProc, $DN, $res)
 	$UHR = 0;
 	
 	while ($row = mysql_fetch_array($result))
-	{			
+	{	
+		
 		switch($row["TipusMOV"])
 		{
 			case "1": 	$UM = $row["UniMas"];

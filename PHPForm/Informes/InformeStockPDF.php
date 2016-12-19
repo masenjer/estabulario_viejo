@@ -17,12 +17,18 @@ $text = MaketaInforme($data);
 $text.= CuerpoInformeStock();
 $fechaInforme = date("d/m/Y");
 
+echo $text;
+/*
 use Dompdf\Dompdf;
 
 $dompdf = new Dompdf();
 $dompdf->loadHtml($text); 
-$dompdf->setPaper('A4','landscape');
+$dompdf->setPaper('A4');
 $dompdf->render();
+
+
 $dompdf->stream("Stock".$fechaInforme.".pdf");
+
+*/
 
 ?>

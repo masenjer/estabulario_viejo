@@ -135,7 +135,8 @@ hr {
 </head>
 
 <body>
-
+';
+/*
 <div id="header">
   <table>
     <tbody><tr>
@@ -153,5 +154,7 @@ hr {
 
 
 ';
+
+*/
 }
 ?>
