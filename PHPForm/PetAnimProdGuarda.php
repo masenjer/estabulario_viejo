@@ -27,6 +27,12 @@ $SAC = $_POST["Sacrifici"];
 
 $Obs = $_POST["Obs"];
 
+echo "-----".$aux."-----</br>";
+
+if(!$CC||!$NProc||!$FR||!$HR||!$LR||!$aux){
+	exit ("Ha ocorregut un error quan s'intentava guardar la comanda");
+}
+
 if (!$aux||(count($aux)==0)){ 
 	echo "Hi ha hagut un error al tramitar la comanda, si us plau actualitzi la pàgina amb F5 i torni a provar d'omplir-la ";
 	return false;
@@ -45,8 +51,9 @@ $hoy = date("Y-m-d");
 	$validado = 1; ///Variable que nos permitira volver atras en el caso que no hayan animales
 
 	$todo = explode("#",$aux);
-	
-	//echo "todo:".print_r($todo);
+
+
+	print_r($todo);
 	
 	foreach ($todo as $linea){
 	
@@ -87,7 +94,7 @@ $hoy = date("Y-m-d");
 			$result = mysql_query($SQL,$oConn);
 			
 			if (mysql_error($oConn)) die("ERROR:".mysql_error($oConn));
-			//echo $SQL;
+			echo $SQL;
 			
 			//Seco y cantidad ,,
 			$UniMas = 0;
