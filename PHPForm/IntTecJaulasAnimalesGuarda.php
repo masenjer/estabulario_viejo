@@ -38,15 +38,24 @@ if ($FD) Devolucio($IdCC,$FD,$HD,0);
 
 $v = explode("#",$aux1);
 
-for ($i=1; $i<count($v); $i++)
+//print_r ($v);
+
+//echo $count($v);
+
+for ($k=1; $k<count($v); $k++)
 {	
-	$cadena = explode("|",$v[$i]);
+//	echo '<p>'.$v[$k].'</p>';
+//	echo "1<br>";
+
+	$cadenaSQL = "";
+	$cadena = explode("|",$v[$k]);
 
 	$animenums = explode(",",$cadena[2]);
 	//echo "cadena[2]:".$animenums;
 
-	//print_r( $animenums);
-	foreach($animenums as $anim){		
+//	print_r( $animenums);
+	foreach($animenums as $anim){	
+//	echo "2<br>";	
 		$rango = explode("-",$anim);
 
 		//print_r($rango);
@@ -80,7 +89,7 @@ for ($i=1; $i<count($v); $i++)
 
 	$result = mysql_query($SQL,$oConn);
 	
-	//echo $SQL;
+//	echo $SQL;
 }
 
 $cadena = "";
