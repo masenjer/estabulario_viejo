@@ -60,7 +60,7 @@ $SQL = "SELECT DISTINCT AC.FechaNacimiento, AC.IdProcediment, P.NumProc
 				
 		WHERE 
 				AC.IdSoca = $idS 
-			AND(P.IdProcediment = ".$idP." OR P.IdProcediment = 12)
+			AND  P.IdProcediment = 12 
 		ORDER BY AC.FechaNacimiento, P.NumProc	
 			";
 
