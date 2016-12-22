@@ -318,10 +318,8 @@ function GuardaPetAnimProdEst(form)
 
 function LlegadaGuardaPetAnimProdEst(data)
 {
-	alert("La seva petici"+ String.fromCharCode(243) +" ha estat cursada correctament. Pot veure l'estat de la seva comanda al gestor de comandes, polsant el bot"+ String.fromCharCode(243) +" groc situat a la dreta del men"+ String.fromCharCode(250) +" superior d'aquesta mateixa plana");
-		TancaPetAnimProdEst();
 	//alert(data);
-	/*if (data == 0)
+	if (data == 0)
 	{
 		alert("La seva petici"+ String.fromCharCode(243) +" ha estat cursada correctament. Pot veure l'estat de la seva comanda al gestor de comandes, polsant el bot"+ String.fromCharCode(243) +" groc situat a la dreta del men"+ String.fromCharCode(250) +" superior d'aquesta mateixa plana");
 		TancaPetAnimProdEst();	
@@ -330,7 +328,6 @@ function LlegadaGuardaPetAnimProdEst(data)
 	{
 		alert(data);	
 	}
-	*/
 }
 
 function ValidaPetAnimProd(CC,NumProc,FR,HR,LR,VM,Sacrifici,aux, form)

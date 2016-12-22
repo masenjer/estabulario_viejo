@@ -27,10 +27,10 @@ $SAC = $_POST["Sacrifici"];
 
 $Obs = $_POST["Obs"];
 
-echo "-----".$aux."-----</br>";
+//echo "-----".$aux."-----</br>";
 
 if(!$CC||!$NProc||!$FR||!$HR||!$LR||!$aux){
-	exit ("Ha ocorregut un error quan s'intentava guardar la comanda");
+	exit ("Ha ocorregut un error quan s'intentava guardar la comanda. Es possible que el teu ordinador tingui guardada una versió antiga de la web a la caché. Per solucionar-ho neceteja la caché del teu navegador polsant Control+R o mayuscula + F5 i reinicia la página. Si el problema persisteix, posat en contacte amb el Centre de Recursos Docents de la Facultat de Medicina al 93 581 40 55");
 }
 
 if (!$aux||(count($aux)==0)){ 
@@ -53,7 +53,7 @@ $hoy = date("Y-m-d");
 	$todo = explode("#",$aux);
 
 
-	print_r($todo);
+	//print_r($todo);
 	
 	foreach ($todo as $linea){
 	
@@ -94,7 +94,7 @@ $hoy = date("Y-m-d");
 			$result = mysql_query($SQL,$oConn);
 			
 			if (mysql_error($oConn)) die("ERROR:".mysql_error($oConn));
-			echo $SQL;
+			//echo $SQL;
 			
 			//Seco y cantidad ,,
 			$UniMas = 0;
