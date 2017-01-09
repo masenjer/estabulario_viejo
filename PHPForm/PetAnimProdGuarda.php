@@ -25,6 +25,7 @@ $aux = $_POST["aux"];
 $VM = $_POST["VM"];
 $SAC = $_POST["Sacrifici"];
 
+
 $Obs = $_POST["Obs"];
 
 //echo "-----".$aux."-----</br>";
@@ -89,8 +90,14 @@ $hoy = date("Y-m-d");
 			
 			//echo "-----".$cadena[5].":";
 			//echo $fechaNac."-----";
+
+			if ($cadena[5]){
+				$crias = $cadena[5];
+			}else{
+				$crias = 0;
+			}
 			
-			$SQL = "INSERT INTO PetAnimProd(IdComandaCap, IdSoca, Cantidad, FechaNac, Sexo, IdProcediment, Estado,IdUser, CT, Crias) VALUES ($IdCC,".$cadena[0].",".$cadena[1].",'".$fechaNac."','".$cadena[3]."','".$idProcLinea."',0,". $_SESSION["IdUser"].",0,'".$cadena[5]."')";
+			$SQL = "INSERT INTO PetAnimProd(IdComandaCap, IdSoca, Cantidad, FechaNac, Sexo, IdProcediment, Estado,IdUser, CT, Crias) VALUES ($IdCC,".$cadena[0].",".$cadena[1].",'".$fechaNac."','".$cadena[3]."','".$idProcLinea."',0,". $_SESSION["IdUser"].",0,'".$crias."')";
 			$result = mysql_query($SQL,$oConn);
 			
 			if (mysql_error($oConn)) die("ERROR:".mysql_error($oConn));
