@@ -16,12 +16,12 @@ function FechaFutura(fecha)
 		
 		case "Jueves":		f = f.addDays(3); 
 							break; 
-		case "Viernes":		f = f.addDays(4);
+		case "Viernes":		f = f.addDays(3);
 							break; 
-		case "Sábado":		f = f.addDays(3);
+		case "Sábado":		f = f.addDays(2);
 							break; 	
 		
-		case "Domingo":		f = f.addDays(2);
+		case "Domingo":		f = f.addDays(1);
 							break; 	
 	}
 /*
