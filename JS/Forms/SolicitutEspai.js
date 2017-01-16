@@ -194,7 +194,7 @@ function ValidaSolicitutEspais(CC,NumProc,aux,Procedencia,FechaLlegada)
 
 	if((!CC)||(!NumProc)||(!Procedencia)||(!FechaLlegada)||(NumProc == 0)) error = false;
 	
-	if ((FechaLlegada)&&!FechaFutura(FechaLlegada)){alert("La data d'arribada ha de ser superior a l\'actual");error = false;}
+	if ((FechaLlegada)&&!FechaFutura(FechaLlegada,"d'arribada ")){error = false;}
 	
 	var v = aux.split("#");
 	//console.log("length:"+v.length);

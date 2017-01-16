@@ -20,10 +20,16 @@ if ($_SESSION["PEmail"])
 {
 ?>
     <tr>
-    	<td background="img/MenuAdmin/TaulaC.jpg" align="center"><input type="button" id="ButtonSobre" onClick="MostraGestioMailing();" title="Enviament d'emails massius" /></td>
+        <td background="img/MenuAdmin/TaulaC.jpg" align="center"><input type="button" id="ButtonSobre" onClick="MostraGestioMailing();" title="Enviament d'emails massius" /></td>
     </tr>
     <tr>
-    	<td background="img/MenuAdmin/TaulaC.jpg" height="5px"></td>
+        <td background="img/MenuAdmin/TaulaC.jpg" height="5px"></td>
+    </tr>    
+    <tr>
+        <td background="img/MenuAdmin/TaulaC.jpg" align="center"><input type="button" id="ButtonFestius" onClick="MostraGestioFestiu();" title="Gestió de calendari laboral" /></td>
+    </tr>
+    <tr>
+        <td background="img/MenuAdmin/TaulaC.jpg" height="5px"></td>
     </tr>
 <?php
 }

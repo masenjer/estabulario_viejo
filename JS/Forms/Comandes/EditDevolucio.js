@@ -21,7 +21,7 @@ function SaveDevolucio(id)
 	var FR = $("#EditaFechaDevolucio").val();
 	var HR = $("#EditaHoraDevolucio").val();
 	
-	if (!FechaFutura(FR)){alert("La data de Devolucio/utilitzaci"+String.fromCharCode(243)+" ha de ser superior a l\'actual");error = false;}
+	if (!FechaFutura(FR, "de devolucio/utilitzaci"+String.fromCharCode(243))){error = false;}
 	
 	if (error)	
 		$.post("PHPForm/DetallComanda/lib/DevolucioEdit.php",{id:id,FR:FR,HR:HR},LlegadaSaveDevolucio); 

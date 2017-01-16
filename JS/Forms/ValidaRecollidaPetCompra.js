@@ -8,10 +8,10 @@ function ValidaRecollidaPetCompra(FR,HR,LR,VM,Sacrifici)
 
 	if((!FR)||(!HR)||(!LR)) error = false;
 	
-	var data = FechaFuturaPetCompra(FR);
+	 
 	//alert(data);
-	var cadena = data.split("|")
-	if ((FR)&&(cadena[0])=="false"){alert("La data de recollida/utilitzaci"+String.fromCharCode(243)+" ha de ser superior al dia "+cadena[1]);error = false;}
+
+	if ((FR)&&(!FechaFutura(FR, "de recollida/utilitzaci"+String.fromCharCode(243),6))){error = false;}
 
 	if (!VM){
 		alert("Has d' indicar si recollir"+String.fromCharCode(224)+"s els animals vius o morts");

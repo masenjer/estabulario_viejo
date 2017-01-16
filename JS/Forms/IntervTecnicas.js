@@ -189,7 +189,7 @@ function ValidaIntTec(CC,NumProc,FR,HR,LR,EsH,CeH,EsM,CeM,VH1,FH1,HH1,EH,SGH,CaH
 
 	if (!SGM){alert("Has d' indicar la unitat d' edat / pes del mascle");error=false;}
 	if (!FC){alert("Has d' indicar una data d' encreuament");error=false;}
-	if ((FC)&&!FechaFutura(FC)){alert("La data d' encreuament ha de ser superior a l\'actual");error = false;}
+	if ((FC)&&!FechaFutura(FC, "d'encreuament" )){error = false;}
 	
 	if ((RestaFechas(FH2,FC))&&(FH2!=FC)){alert("La data d'encreuament ha de ser superior o igual a la data d'hormonaci"+String.fromCharCode(243)+" de l'hormona 2");error=false;}
 
@@ -208,7 +208,7 @@ function ValidaIntTec(CC,NumProc,FR,HR,LR,EsH,CeH,EsM,CeM,VH1,FH1,HH1,EH,SGH,CaH
 //	} 
 
 	if (!FH1){alert("Has d' indicar una data per a l' Hormona 1 (PMSG)");error=false;}
-	if ((FH1)&&!FechaFutura(FH1)){alert("La data per a l' Hormona 1 (PMSG) ha de ser superior a l\'actual");error = false;}
+	if ((FH1)&&!FechaFutura(FH1,"per a l' Hormona 1 (PMSG)")){error = false;}
 	if (!HH1){alert("Has d' indicar una hora per a l' Hormona 1 (PMSG)");error=false;}
 	if (!VH2){alert("Has d' indicar un volum per a l' Hormona 2 (HCG)");error=false;}
 	if (VH2 == "0"){alert("El volum per a l' Hormona 2 (HCG) ha de ser superior a 0");error = false;}
@@ -218,7 +218,7 @@ function ValidaIntTec(CC,NumProc,FR,HR,LR,EsH,CeH,EsM,CeM,VH1,FH1,HH1,EH,SGH,CaH
 //		error = false;
 //	} 
 	if (!FH2){alert("Has d' indicar una data per a l' Hormona 2 (HCG)");error=false;}
-	if ((FH2)&&!FechaFutura(FH2)){alert("La data per a l' Hormona 2 (HCG) ha de ser superior a l\'actual");error = false;}
+	if ((FH2)&&!FechaFutura(FH2,"per a l' Hormona 2 (HCG)")){error = false;}
 	if (!HH2){alert("Has d' indicar una hora per a l' Hormona 2 (HCG)");error=false;}
 	if (RestaFechas(FH1,FH2)){alert("La data per tal d'aplicar la hormona 1 ha de ser anterior a la de la hormona 2");error=false;}
 	if (FC&&FR&&RestaFechas(FC,FR)){alert("La data d'encreuament ha de ser inferior a la data de recollida");error=false;}
@@ -226,16 +226,16 @@ function ValidaIntTec(CC,NumProc,FR,HR,LR,EsH,CeH,EsM,CeM,VH1,FH1,HH1,EH,SGH,CaH
 	if (!HC){alert("Has d' incicar una hora d' encreuament");error=false;}
 	if (!T){alert("Has d' indicar si vols que es mirin els taps vaginals");error=false;}
 	if ((T==1)&&(!FTD)){alert("Has de indicar una data inicial per mirar els taps vaginals");error=false;};
-	if ((FTD)&&!FechaFutura(FTD)){alert("La data d'inici per mirar els taps vaginals ha de ser superior a l\'actual");error=false;}
+	if ((FTD)&&!FechaFutura(FTD,"d'inici per mirar els taps vaginals")){error=false;}
 	if ((T==1)&&(!FTH)){alert("Has d' indicar una data final per mirar els taps vaginals");error=false;};
-	if ((FTH)&&!FechaFutura(FTH)){alert("La data final per mirar els taps vaginals ha de ser superior a l\'actual");error=false;}
+	if ((FTH)&&!FechaFutura(FTH,"final per mirar els taps vaginals")){error=false;}
 	
 	if ((T==1)&&RestaFechas(FC,FTD)){alert("La data inicial per mirar els taps vaginals ha de ser superior a la data d'encreuament");error=false;}
 	
 	if ((T==1)&&RestaFechas(FTD,FTH)){alert("La data final per mirar els taps vaginals ha de ser superior a la data inicial");error=false;}
 	if (!S){ alert("Has d' indicar si vols separar als animals");error=false;};
 	if ((S==1)&&(!FS)){alert("Has d' indicar una data per separar");error=false;};
-	if ((FS)&&!FechaFutura(FS)){alert("La data per separar ha de ser superior a l\'actual");error = false;}
+	if ((FS)&&!FechaFutura(FS,"per separar")){error = false;}
 	if ((S==1)&&(T==1)&&FTH&&FS&&RestaFechas(FTH,FS)){alert("La data de separaci"+String.fromCharCode(243)+" ha de ser superior o igual a la data final per mirar els taps vaginals");error=false;}
 	
 	if ((S==1)&&(T==0)&&FS&&RestaFechas(FC,FS)){alert("La data de separaci"+String.fromCharCode(243)+" ha de ser superior a la data d'encreuament");error=false;}
@@ -459,13 +459,13 @@ function ValidaIntTecCruce(CC,NumProc,FR,HR,LR,VM,Sacrifici,EsH,CeH,EsM,CeM,EH,S
 	if (!SGM){alert("Has d' indicar la unitat d' edat / pes del mascle");error = false;}
 	if (!T){alert("Has d' indicar si vols que es mirin els taps vaginals");error = false;}
 	if ((T==1)&&(!FTD)){ alert("Has de indicar una data inicial per mirar els taps vaginals");error=false;};
-	if ((FTD)&&!FechaFutura(FTD)){alert("La data d'inici per mirar els taps vaginals ha de ser superior a l\'actual");error=false;}
+	if ((FTD)&&!FechaFutura(FTD,"d'inici per mirar els taps vaginals")){error=false;}
 	if ((T==1)&&(!FTH)){ alert("Has d' indicar una data final per mirar els taps vaginals");error=false;};
-	if ((FTH)&&!FechaFutura(FTH)){alert("La data final per mirar els taps vaginals ha de ser superior a l\'actual");error=false;}
+	if ((FTH)&&!FechaFutura(FTH,"final per mirar els taps vaginals")){error=false;}
 	if ((T==1)&&RestaFechas(FTD,FTH)){alert("La data final per mirar els taps vaginals ha de ser superior a la data inicial");error=false;}
 	if (!S){ alert("Has d' indicar si vols separar als animals");error=false;};
 	if ((S==1)&&(!FS)){ alert("Has d' indicar una data per separar");error=false;};
-	if ((FS)&&!FechaFutura(FS)){alert("La data per separar ha de ser superior a l\'actual");error = false;}
+	if ((FS)&&!FechaFutura(FS,"per separar")){error = false;}
 	//if (!CHM) alert("Has d' indicar una quantitat de femelles per mascle");
 
 	if ((S==1)&&(T==1)&&FTH&&FS&&RestaFechas(FTH,FS)){alert("La data de separaci"+String.fromCharCode(243)+" ha de ser superior a la data d'extracci"+String.fromCharCode(243)+" de taps vaginals");error=false;}
@@ -500,7 +500,7 @@ function ValidaIntTecCruce(CC,NumProc,FR,HR,LR,VM,Sacrifici,EsH,CeH,EsM,CeM,EH,S
 			if((c[4]))
 			{
 				//alert("Entro");
-				if ((c[4])&&!FechaFutura(c[4])){alert("La data d' encreuament al bloc " + +(c[6])+" ha de ser superior a l\'actual");error=false;}
+				if ((c[4])&&!FechaFutura(c[4],"d'encreuament al bloc "+(c[6]))){error=false;}
 //	alert(7);
 				if ((T==1)&&!RestaFechas(FTD,c[4])){alert("La data inicial per mirar els taps vaginals ha de ser superior a la data d'encreuament del bloc " +(c[6]));error=false;}
 //	alert(8);
@@ -923,7 +923,7 @@ function ValidaJaulasAnimales(CC,NumProc,FR,HR,VM,Sacrifici,RD,FD,HD,aux1,aux2)
 		alert("Has d' indicar una hora de devoluci"+String.fromCharCode(243)+"");
 		error = 1;
 	}
-	if ((RD == "1")&&!FechaFutura(FD)){alert("La data de devoluci"+String.fromCharCode(243)+" ha de ser superior a l\'actual");error = false;}
+	if ((RD == "1")&&!FechaFutura(FD,"de devoluci"+String.fromCharCode(243))){error = false;}
 	if ((RD == "1")&&RestaFechas(FR,FD)){alert("La data de recollida ha de ser superior a la data de devoluci"+String.fromCharCode(243));error=false;}
 
 	var v = aux1.split("#");

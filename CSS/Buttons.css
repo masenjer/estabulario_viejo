@@ -78,6 +78,17 @@
 	height:56px;
 }
 
+#ButtonFestius
+{
+	border:1px;
+	border-style:solid;
+	border-color:#666;
+	background:url(../img/MenuAdmin/ButtonFestius.jpg);
+	cursor:pointer;
+	width:56px;
+	height:56px;
+}
+
 #ButtonNewUserProc
 {
 	border:1px;

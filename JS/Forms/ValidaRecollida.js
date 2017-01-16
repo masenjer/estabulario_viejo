@@ -8,7 +8,7 @@ function ValidaRecollida(FR,HR,LR,VM,Sacrifici)
 
 	if((!FR)||(!HR)||(!LR)) error = false;
 	
-	if ((FR)&&(!FechaFutura(FR))){alert("La data de recollida/utilitzaci"+String.fromCharCode(243)+" ha de ser igual o posterior a dos dies laborables des del dia de la comanda");error = false;}
+	if ((FR)&&(!FechaFutura(FR,"de recollida/utilitzaci"+String.fromCharCode(243)))){error = false;}
 
 	if (!VM){
 		alert("Has d' indicar si recollir"+String.fromCharCode(224)+"s els animals vius o morts");

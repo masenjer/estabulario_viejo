@@ -1,4 +1,4 @@
-<?php include ("Recaptcha/recaptchalib.php")?>
+<?php include ("Recaptcha/recaptchalib.php");?>
 <?php include("Forms/Parts/SelectHoras.php");?>
 <?php include("Forms/Parts/ReservaEquips.php");?>
 <?php include("Forms/Parts/FranjaHoraria.php");?>
@@ -46,6 +46,7 @@
 <?php include("Forms/Parts/Observacions.php");?>
 <?php include("Forms/Parts/UsersWebFitxa.php");?>
 <?php include("Forms/Parts/InvestigadorFitxa.php");?>
+<?php include("Forms/Parts/FestiuFitxa.php");?>
 
 <?php
 	/////S'utilitzen com a user public
@@ -74,10 +75,12 @@ if (($_SESSION["InformeDiari"])||($_SESSION["InformeFacturacio"]))
 	include("Forms/Parts/InformeStock.php");
 	include("Forms/Parts/InformeAnualStock.php");	
 	include("Forms/Parts/InformeDifusionEmail.php");
+
 } 
 if ($_SESSION["PEmail"])
 {
 	include("Forms/Admin/Mailing.php");
+	include("Forms/Admin/GestioFestius.php");
 } 
 if ($_SESSION["Stock"])
 {

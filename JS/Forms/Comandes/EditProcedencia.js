@@ -20,7 +20,7 @@ function SaveProcedencia(id)
 	var S = $("#SelectEditProveidor").val();
 	var F = $("#FechaEditProcedencia").val();
 	
-	if (!FechaFutura(F)){alert("La data de Procedencia/utilitzaci"+String.fromCharCode(243)+" ha de ser superior a l\'actual");error = false;}
+	if (!FechaFutura(F,"de procedencia/utilitzaci"+String.fromCharCode(243))){error = false;}
 	
 	if ((error)&&(F)&&(S))	
 		$.post("PHPForm/DetallComanda/lib/ProcedenciaEdit.php",{id:id,S:S,F:F},LlegadaSaveProcedencia);

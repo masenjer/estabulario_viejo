@@ -104,7 +104,7 @@ function ValidaEntradaMateriales(EM)
 			{
 				if(!c[0]){alert("Has d'omplir el camp data de la fila " + c[2]);aux = false;}
 				if(!c[1]){alert("Has d'omplir el camp Materials de la fila " + c[2]);aux = false;}
-				if (!FechaFutura(c[0])){alert("La data de la fila " + c[2] + " ha de ser superior a l\'actual");aux = false;}
+				if (!FechaFutura(c[0],"de la fila " + c[2])){aux = false;}
 				d=d+1;
 			}
 		}

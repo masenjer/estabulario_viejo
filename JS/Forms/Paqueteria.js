@@ -46,10 +46,9 @@ function GuardaPaqueteria(form)
 		alert("Has d'omplir tots els camps");
 	}
 	
-	if (!FechaFutura(F)) 
+	if (!FechaFutura(F,"d'arribada prevista")) 
 	{
 		error = 1;
-		alert("La data d'arribada prevista ha de ser superior a la data actual");
 	}	
 		
 	if (error == 0) $.post("PHPForm/PaqueteriaGuarda.php",{P:P,C:C,F:F,I:I,CE:CE,Obs:Obs},LlegadaGuardaPaqueteria);

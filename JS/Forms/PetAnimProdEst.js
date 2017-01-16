@@ -395,10 +395,8 @@ function ValidaPetAnimProd(CC,NumProc,FR,HR,LR,VM,Sacrifici,aux, form)
 			
 	//console.log(c[2]);		
 			if (c[2]){
-				if (FechaFutura(c[2]))
+				if (FechaFutura(c[2],"de naixement / arribada dels animals del bloc "+eval(i+1)))
 				{
-					
-					alert("La data de naixement / arribada dels animals del bloc "+eval(i+1)+" ha de ser igual o anterior al dia d'avui"); 
 					error = false;
 				}
 				

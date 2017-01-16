@@ -163,8 +163,7 @@ function ValidaReservaEspais(CC,NProc,Eq1,Horari)
 			alert("La data ha de ser superior a la data actual al bloc " + cadena[3]);
 			error = false;
 		}
-		if ((cadena[0])&&(!FechaFutura(cadena[0]))){
-			alert("La data de la reserva ha de ser igual o posterior a dos dies laborables des del dia de la comanda per al bloc " + cadena[3]);
+		if ((cadena[0])&&(!FechaFutura(cadena[0],"de la reserva"))){
 			error = false;
 		}
 		

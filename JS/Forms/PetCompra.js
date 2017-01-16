@@ -660,7 +660,7 @@ function ValidaConsumibles(CC,NumProc,aux,form)
 			if ((c[z+1])&&(!c[z+3])) alert("Has de seleccionar una data al bloc " + eval(i+1) + " de " + t[j]); 	
 			else 
 				if (c[z+1])
-					if ((c[z+3])&&(!FechaFutura(c[z+3]))){alert("La data de recollida/utilitzaci"+String.fromCharCode(243)+" al bloc " + eval(i+1) + " de " + t[j]+" ha de ser superior a l\'actual");error = false;}
+					if ((c[z+3])&&(!FechaFutura(c[z+3],"de recollida/utilitzaci"+String.fromCharCode(243)+" al bloc " + eval(i+1)))){error = false;}
 
 			if ((c[z+1])&&((!c[z+2])||(!c[z+3]))) error = false;	
 			

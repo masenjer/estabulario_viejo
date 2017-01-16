@@ -234,9 +234,8 @@ function ValidaPetHemAc(CC,NumProc,FR,HR,VM,Sacrifici,aux)
 			}
 			
 			//alert("Fecha Futura:" +FechaFutura(c[z+4]) );
-			if ((c[z+1])&&!FechaFutura(c[z+4]))
+			if ((c[z+1])&&!FechaFutura(c[z+4],"d'acoblament del bloc " + eval(i+1)))
 			{
-				alert ("La data d'acoblament del bloc " + eval(i+1)+ " ha de ser posterior a la data indicada");
 				error = false;
 			}
 			

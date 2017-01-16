@@ -165,7 +165,10 @@ if (!$_SESSION["IdA"])
 
 	
 	////Admin
-	if ($_SESSION["PEmail"])		MostraGestioMailing();
+	if ($_SESSION["PEmail"]){
+		MostraGestioMailing();
+		MostraGestioFestiu();	
+	}
 	if ($_SESSION["Proveidors"])		MostraGestioProveidors();
 	if ($_SESSION["Fungibles"])	MostraGestioConsumibles();
 	if (($_SESSION["InformeDiari"])||($_SESSION["InformeFacturacio"]))		MostraGestioInformes();

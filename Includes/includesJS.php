@@ -99,6 +99,7 @@ function MostraIncludesJS()
     <script src="JS/Forms/EliminaFilasTabla.js" type="text/javascript"> </script>
 	<script src="JS/Forms/UserComandes.js" type="text/javascript"> </script>
     <script src="JS/Forms/PermisForms.js" type="text/javascript"> </script>
+    <script src="JS/Forms/GestioFestius.js" type="text/javascript"> </script>
 
 <?php if ($_SESSION["Comandes"]) 
 {?>
