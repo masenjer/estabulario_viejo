@@ -37,23 +37,29 @@ $cuenta = 0;
 
 while ($cuenta <$dies ){
 
+	$salto = false;
+
 	$hoy = date('Y-m-d', strtotime('+1 day', strtotime($hoy)));
 	$N = date('N', strtotime($hoy));
 
-	//echo $cuenta.":".$hoy.':'.$N.'<br>';
+	//echo $cuenta.":".$hoy.':'.$N;
 	
 
-	if ($N>5){ // No es sábado ni domingo -> No cuentan como dia laboral
-		//echo "entro";
-		continue;
+	if ($N>5){ //Es sábado ni domingo -> No cuentan como dia laboral
+		//echo "fin de semana <br>";
+		$salto = true;
 	}
 
 	foreach ($festivos as $festivo){
-		if ($festivo == $fc) {
-			//echo "paso";
-			continue;
+		if ($festivo == $hoy) {
+			//echo "festivo <br>";
+			$salto = true;
 		}
 	}
+
+	if ($salto == true) continue;
+
+	//echo '<br>';
 
 	$cuenta ++;
 }

@@ -412,7 +412,12 @@ function GuardaIntTecCruce(form)
 	
 	if (ValidaIntTecCruce(CC,NumProc,FR,HR,LR,VM,Sacrifici,EsH,CeH,EsM,CeM,EH,SGH,EM,SGM,FC,HC,T,FTD,FTH,S,FS,rV,aux,form))
 	{
-		if (confirm("Has sol·licitat un encreuament continuo al no especificar una data de recollida/utilització. Estàs segur/a de voler continuar amb la sol·licitud?")){
+		if(!FR){
+
+			if (confirm("Has sol·licitat un encreuament continuo al no especificar una data de recollida/utilització. Estàs segur/a de voler continuar amb la sol·licitud?")){
+				$.post("PHPForm/"+form+"Guarda.php",{NumProc:NumProc,CC:CC,FR:FR,HR:HR,LR:LR,VM:VM,Sacrifici:Sacrifici,EsH:EsH,CeH:CeH,EsM:EsM,CeM:CeM,EH:EH,SGH:SGH,EM:EM,SGM:SGM,FC:FC,HC:HC,T:T,FTD:FTD,FTH:FTH,S:S,FS:FS,rV:rV,aux:aux,Obs:Obs},LlegadaGuardaIntTec);	
+			}
+		}else{
 			$.post("PHPForm/"+form+"Guarda.php",{NumProc:NumProc,CC:CC,FR:FR,HR:HR,LR:LR,VM:VM,Sacrifici:Sacrifici,EsH:EsH,CeH:CeH,EsM:EsM,CeM:CeM,EH:EH,SGH:SGH,EM:EM,SGM:SGM,FC:FC,HC:HC,T:T,FTD:FTD,FTH:FTH,S:S,FS:FS,rV:rV,aux:aux,Obs:Obs},LlegadaGuardaIntTec);	
 		}
 		//alert("entro");
@@ -912,16 +917,16 @@ function ValidaJaulasAnimales(CC,NumProc,FR,HR,VM,Sacrifici,RD,FD,HD,aux1,aux2)
 
 	if(!RD){
 		alert("Has d'indicar si hi haur"+String.fromCharCode(224)+" o no devoluci"+String.fromCharCode(243)+" d' animals i/o g"+String.fromCharCode(224)+"bies");	
-		error = 1;
+		error = false;
 	}
 	if ((RD == "1")&&(!FD)){
 		alert("Has d' indicar una data de devoluci"+String.fromCharCode(243)+"");
-		error = 1;
+		error = false;
 	}
 	if ((RD == "1")&&(!HD))
 	{
 		alert("Has d' indicar una hora de devoluci"+String.fromCharCode(243)+"");
-		error = 1;
+		error = false;
 	}
 	if ((RD == "1")&&!FechaFutura(FD,"de devoluci"+String.fromCharCode(243))){error = false;}
 	if ((RD == "1")&&RestaFechas(FR,FD)){alert("La data de recollida ha de ser superior a la data de devoluci"+String.fromCharCode(243));error=false;}
