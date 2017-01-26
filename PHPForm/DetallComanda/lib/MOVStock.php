@@ -9,9 +9,9 @@ function MOVStockGuarda($idSoca, $NSM, $NSH,$FechaMOV,$TipusMOV,$IdProc,$DN,$IdC
 	
 	if ($validado == 1)
 	{	
-		$SQL = " INSERT INTO AnimalMOVCap(IdSoca, UniMas, UniFam, Fecha, TipusMOV, IdProcediment, IdUser,FechaNacimiento, IdComandaCap)VALUES($idSoca, $NSM, $NSH,'$FechaMOV',$TipusMOV,$IdProc,".$_SESSION["IdUser"].",'$DN',$IdCC)";
+		$SQL = " INSERT INTO AnimalMOVCap(IdSoca, UniMas, UniFam, Fecha, TipusMOV, IdProcediment, IdUser,FechaNacimiento, IdComandaCap)VALUES($idSoca, $NSM, $NSH,'$FechaMOV',$TipusMOV,$IdProc,".$_SESSION["IdA"].",'$DN',$IdCC)";
 		
-		$result = mysql_query($SQL,$oConn);
+		if(!$result = mysql_query($SQL,$oConn)) echo "ERROR:".mysql_error();
 	}
 	
 //		echo "Validado:".$validado.", SQL:".$SQL."<br>";

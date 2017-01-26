@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL);
+error_reporting(0);
 
 include("../rao/EstabulariForm_con.php");
 include("../rao/Ponquita.php");
@@ -7,7 +7,7 @@ include("../PHP/Fechas.php");
 
 $motiu = $_POST["motiu"];
 $fc = InsertFecha($_POST["fecha"]);
-if ($_POST["dies"]) $dies = $_POST["dies"];
+if (isset($_POST["dies"])) $dies = $_POST["dies"];
 else $dies = 2;
 
 
