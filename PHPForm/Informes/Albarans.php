@@ -1,4 +1,8 @@
 <?php
+
+//error_reporting(E_ALL); 
+//ini_set("display_errors", 1); 
+
 include("../../rao/EstabulariForm_con.php");
 include("../../rao/PonQuita.php"); 
 include("../../PHP/Fechas.php"); 
@@ -210,31 +214,28 @@ hr {
 					<b>Número d\'albarà:</b> '.$id.'
 				</td>
 			</tr>		
-			<tr>
-				<td colspan="2">
-					<b>Número de procediment:</b> '.$NumProc.'
-				</td>
-			</tr>		
+				
 		</table>
-		<br>
+		
 		<br>
 ';
 
 if ($idP)
 {
-		$SQL = "SELECT I.Nom,I.Cognoms, P.Projecte 
+		$SQL = "SELECT IP.Nom as NomProcediment,IP.Cognoms as CognomsProcediment, IE.Nom as NomProjecte,IE.Cognoms as CognomsProjecte, P.Projecte 
 				FROM ComandaCap CC
-				INNER JOIN 	Projecte P 
-							
+				INNER JOIN 	(Projecte P 
+							 INNER JOIN Investigador IE 
+							ON IE.IdInvestigador = P.IdInvestigador)			
 				ON 			P.IdProjecte = CC.IdProjecte
 				
 				INNER JOIN (Procediment PP
-							INNER JOIN Investigador I 
-							ON I.IdInvestigador = PP.IdInvestigador)
+							INNER JOIN Investigador IP 
+							ON IP.IdInvestigador = PP.IdInvestigador)
 							
 				ON		PP.IdProcediment = CC.IdProcediment	 
 				WHERE 	CC.IdComandaCap=".$id;
-	$result = mysql_query($SQL,$oConn);
+	if(!$result = mysql_query($SQL,$oConn))DIE("ERROR:".mysql_error());
 	
 	//echo $SQL;
 	while ($row = mysql_fetch_array($result))
@@ -242,10 +243,21 @@ if ($idP)
 		$text.='
 		<table width="100%" cellpadding="0" cellspacing="0" border="0">
 			<tr>
-				<td align="left"><b>Investigador: </b>'.$row["Nom"].' '.$row["Cognoms"].'</td>
+				<td align="left"><b>Responsable étic: </b>'.$row["NomProcediment"].' '.$row["CognomsProcediment"].'</td>
 			</tr>
 			<tr>
-				<td align="left"><b>Centre Gestor o Projecte: </b>'.$row["Projecte"].'</td>
+				<td align="left"><b>Número de projecte étic: </b>'.$NumProc.'</td>
+				
+			</tr>
+			</table>
+		
+		<br>
+		<table width="100%" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td align="left"><b>Responsable econòmic: </b>'.$row["NomProjecte"].' '.$row["CognomsProjecte"].'</td>
+			</tr>
+			<tr>
+				<td align="left"><b>Número de projecte econòmic: </b>'.$row["Projecte"].'</td>
 				
 			</tr>	
 		</table><br><br>'; 
@@ -303,13 +315,18 @@ $text .= MostraObservacions($id).'<br><br><br><br>Firma
 //
 //	$text .= MostraObservacions($id);
 //	
-//	echo utf8_decode($text);
+	//echo utf8_decode($text);
 //	
+
+//echo $text;
+
 	use Dompdf\Dompdf;
+
+
 
 	$dompdf = new Dompdf();
 	$dompdf->loadHtml($text); 
 	$dompdf->render();
-	$dompdf->stream("albara".$id.".pdf");
+	$dompdf->stream("albara".$id);
 
 ?>
