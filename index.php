@@ -30,7 +30,12 @@ session_start(); ?>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
     <meta http-equiv="Page-Enter" content="RevealTrans(Duration=3.0,Transition=10)">
     <meta http-equiv="Page-Exit" content="RevealTrans(Duration=2.0,Transition=7)">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf8"> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+
+	<meta http-equiv="Expires" content="0"> 
+	<meta http-equiv="Last-Modified" content="0"> 
+	<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate"> 
+	<meta http-equiv="Pragma" content="no-cache"> 
     
 <?php MostraIncludesJS(); ?>
 
