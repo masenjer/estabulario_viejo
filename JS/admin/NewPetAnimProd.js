@@ -5,6 +5,8 @@ function MostraFitxaNewPetAnimProd(id)
 	$("#Cepa0NewPetAnimProd").html("");
 	$("#Cantidad0NewPetAnimProd").val("");
 	$("#FechaNac0NewPetAnimProd").val("");
+
+	console.log("NPROC", $("#NProc0NewPetAnimProd").val());
 	
 	//DefineCalendario('FechaNac0NewPetAnimProd');
 	

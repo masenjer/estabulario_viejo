@@ -24,6 +24,8 @@ function ComprovaStock($id, $NProc, $DN, $res)
 		{
 			case "1": 	$UM = $row["UniMas"];
 						$UH = $row["UniFam"];
+						$UMR = 0;
+						$UHR = 0;
 						break;	
 			case "2": 	
 			case "3": 	$UM += $row["UniMas"];
@@ -33,7 +35,9 @@ function ComprovaStock($id, $NProc, $DN, $res)
 			case "5":
 			case "8":   //Excedent
 			case "9": 	//Sexat
-					 	$UM -=  $row["UniMas"];
+			case "10":  //Recollida
+			case "11":	//Utilitzacio
+						$UM -=  $row["UniMas"];
 						$UH -=  $row["UniFam"];
 						break;	
 			case "6": 	$UM -= $row["UniMas"];

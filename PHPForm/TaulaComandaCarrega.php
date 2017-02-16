@@ -91,7 +91,7 @@ $SQL = "SELECT TC.TipusComanda, P.NumProc, CC.Fecha, CC.IdComandaCap, CC.TipusFo
 		FROM  Users U,ComandaCap CC 
 			LEFT JOIN Procediment P ON (P.IdProcediment = CC.IdProcediment) 
 			INNER JOIN TipusComanda TC ON (TC.IdTipusComanda = TipusForm) 
-		WHERE U.IdUser = CC.IdUsuari ORDER BY CC.AvisT DESC, CC.Facturada ASC, CC.IdComandaCap DESC";
+		WHERE U.IdUser = CC.IdUsuari ORDER BY CC.AvisT DESC, CC.Facturada ASC, CC.IdComandaCap DESC LIMIT 500";
 $result = mysql_query($SQL,$oConn);
 
 while ($row = mysql_fetch_array($result))

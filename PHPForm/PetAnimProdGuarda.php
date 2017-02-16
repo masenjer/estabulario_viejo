@@ -96,11 +96,15 @@ $hoy = date("Y-m-d");
 			}else{
 				$crias = 0;
 			}
+			if ($fechaNac != "null"){
 			
-			$SQL = "INSERT INTO PetAnimProd(IdComandaCap, IdSoca, Cantidad, FechaNac, Sexo, IdProcediment, Estado,IdUser, CT, Crias) VALUES ($IdCC,".$cadena[0].",".$cadena[1].",'".$fechaNac."','".$cadena[3]."','".$idProcLinea."',0,". $_SESSION["IdUser"].",0,'".$crias."')";
+				$SQL = "INSERT INTO PetAnimProd(IdComandaCap, IdSoca, Cantidad, FechaNac, Sexo, IdProcediment, Estado,IdUser, CT, Crias) VALUES ($IdCC,".$cadena[0].",".$cadena[1].",'".$fechaNac."','".$cadena[3]."','".$idProcLinea."',0,". $_SESSION["IdUser"].",0,'".$crias."')";
+			}else{
+				$SQL = "INSERT INTO PetAnimProd(IdComandaCap, IdSoca, Cantidad, FechaNac, Sexo, IdProcediment, Estado,IdUser, CT, Crias) VALUES ($IdCC,".$cadena[0].",".$cadena[1].",".$fechaNac.",'".$cadena[3]."','".$idProcLinea."',0,". $_SESSION["IdUser"].",0,'".$crias."')";
+			}
 			$result = mysql_query($SQL,$oConn);
 			
-			if (mysql_error($oConn)) die("ERROR:".mysql_error($oConn));
+			if (mysql_error($oConn)) die("ERROR:".mysql_error($oConn)."-------".$SQL);
 			//echo $SQL;
 			
 			//Seco y cantidad ,,

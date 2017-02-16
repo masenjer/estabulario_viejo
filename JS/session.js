@@ -9,8 +9,8 @@ function LlegadaComprovaSiSessioUser(data){
 		document.location.reload();	
 	}
 	else{
-		setTimeout(ComprovaSiSessioUser, 60100);	
-	//	setTimeout(ComprovaSiSessioUser, 1080100);	
+	//	setTimeout(ComprovaSiSessioUser, 60100);	
+		setTimeout(ComprovaSiSessioUser, 1080100);	
 	}	
 }
 // JavaScript Document
