@@ -58,6 +58,8 @@ function LlegadaCarregaGridcomandaCap(data)
 	
 		$("#FlechaCapca"+Ordre[0]).html('<img src="img/Grid/FlechaCombo.png">');
 	}
+
+	MarcaDesmarca('Facturada',0,'2',2); //Para que no muestre los pedidos finalizados al recargar
 }
 
 function ResfrescaTaulaComandes()
